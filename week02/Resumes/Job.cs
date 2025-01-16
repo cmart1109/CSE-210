@@ -1,9 +1,10 @@
 using System;
 
 public class Job
-{
+{   
+    public string _companyName;
     public string _jobTitle;
-    public int _experienceYears;
+    public string _time;
     public string _language;
 
     public Job()
@@ -12,8 +13,7 @@ public class Job
 
     public void ShowRequirements()
     {
-        Console.WriteLine("These are the details");
-        Console.WriteLine($"{_jobTitle}: you need {_experienceYears} years of experience in {_language},");
+        Console.WriteLine($"{_jobTitle} ({_companyName}) {_time}, {_language},");
     }
     
 
