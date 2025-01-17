@@ -18,4 +18,8 @@ public class Entry
         Console.WriteLine(_entryText);
         
     }
+    public override string ToString()
+    {
+        return $"{_date}, Prompt: {_promptText}\n{_entryText}";
+    }
 }
