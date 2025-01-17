@@ -2,6 +2,7 @@ using System;
 
 class Program
 {
+        List<Entry> _entries = new List<Entry>();
     static void Main(string[] args)
     {
         string election;
