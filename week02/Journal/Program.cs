@@ -2,7 +2,7 @@ using System;
 
 class Program
 {
-        List<Entry> _entries = new List<Entry>();
+        public List<Entry> _entries = new List<Entry>();
     static void Main(string[] args)
     {
         string election;
@@ -19,7 +19,12 @@ class Program
         electionNumber = int.Parse(election);
         if (electionNumber == 1)
         {
-            
+        Console.WriteLine("You Choose to Write!");
+         Entry entry1 = new Entry();
+         entry1.GetEntry();
+         entry1.Display();
+         _entries.Add(entry1);
+          
         }
         } while (electionNumber != 5);
 
