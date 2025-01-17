@@ -2,7 +2,7 @@ using System;
 
 class Program
 {
-        public List<Entry> _entries = new List<Entry>();
+        public static List<Entry> _entries = new List<Entry>();
     static void Main(string[] args)
     {
         string election;
@@ -24,7 +24,7 @@ class Program
          entry1.GetEntry();
          entry1.Display();
          _entries.Add(entry1);
-          
+        Console.WriteLine("The Writings was succesfully saved!");
         }
         } while (electionNumber != 5);
 
