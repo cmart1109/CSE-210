@@ -1,5 +1,5 @@
 using System.CodeDom.Compiler;
-
+// This Class Generates the prompt that we need to answer.
 public class PromptGenerator
 {
     public List<string> _prompts = new List<string>();

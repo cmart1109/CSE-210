@@ -1,3 +1,4 @@
+// This is the Class that helps me to set the entries when i put the number 1 or display the info with number 2
 public class Entry
 {
     DateTime TheCurrentTime;
@@ -14,12 +15,13 @@ public class Entry
     }
     public void Display()
     {
-        Console.WriteLine($"{_date}, Prompt: {_promptText}");
+        Console.WriteLine($"{_date}, Prompt:  {_promptText}");
         Console.WriteLine(_entryText);
         
     }
+
     public override string ToString()
     {
-        return $"{_date}, Prompt: {_promptText}\n{_entryText}";
+        return $"{_date}, Prompt: {_promptText}: {_entryText}";
     }
 }
