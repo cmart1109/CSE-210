@@ -10,8 +10,8 @@ public class Scripture
         var WordsArray = text.Split(" ");
         foreach (var word in WordsArray)
         {
-            Word word1 = new Word(word);
-            _words.Add(word1);
+            Word wordToAdd = new Word(word);
+            _words.Add(wordToAdd);
         }
     }
 
