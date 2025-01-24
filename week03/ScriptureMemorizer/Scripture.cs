@@ -1,3 +1,6 @@
+using System.IO.Compression;
+using System.Runtime.InteropServices;
+
 public class Scripture
 {
     
@@ -24,13 +27,15 @@ public class Scripture
             _words[index].Hide();
             hiddenCount++;
         }
-        if (IsCompletelyHidden()){
+
+        if (hiddenCount == _words.Count){
             break;
         }
      }   
     }
-    public bool IsCompletelyHidden()
+    public string GetDisplayText()
     {
-        return false;
+        Console.WriteLine("Dinner");
+        return string.Join("",_words.Select(word => word.GetType()));
     }
 }
