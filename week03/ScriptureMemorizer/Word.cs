@@ -17,26 +17,23 @@ public class Word
         _isHidden = false;
     }
     public bool IsHidden()
-    {   
-        if (_isHidden == true)
-        {
-
-        return true;
-        }
-        else {
-        return false;
-        }
-        
-    }
-    public string getDisplayText()
     {
-        if (_isHidden == true)
-        {
-            return "_______";
-        }
-        else {
-            return _text;
-        }
-    }   
+        return _isHidden;
+    }
+
+    public string GetDisplayText()
+    {
+        return _isHidden ? "_______" : _text;
+    }
+
+
+
+
+
+
+
+
+
+
 
 }

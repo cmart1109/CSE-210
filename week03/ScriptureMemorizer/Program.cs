@@ -8,7 +8,7 @@ class Program
         string index;
         Reference reference = new Reference("Proverbs",3,5,6);
         Scripture scripture = new Scripture(reference, "¶ Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him and he shall direct thy paths");
-        scripture.GetDisplayText();
+        Console.WriteLine($"{reference.GetDisplayText()}:{scripture.GetDisplayText()}");
         do 
         {
         Console.WriteLine("Press Enter to Continue or type 'quit' to Finish");
@@ -18,7 +18,8 @@ class Program
 
         }
         else {
-            scripture.HideRandomWords(random.Next(1/5));
+            scripture.HideRandomWords(random.Next(1,5));
+            Console.WriteLine($"{reference.GetDisplayText()}:{scripture.GetDisplayText()}");
         }
         } while (index != "quit");
 
