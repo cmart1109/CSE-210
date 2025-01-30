@@ -4,7 +4,6 @@ using System.Security.Cryptography.X509Certificates;
 class Program
 {
     public static List<Video> _videos = new List<Video>();
-    public string videoInfo;
     static void Main(string[] args)
     {
         // 1st Video
