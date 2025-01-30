@@ -12,6 +12,8 @@ public class Product
         _productId = id;
         _price = price;
         _quantity = quantity;
+        GetTotalCost(_price,_quantity);
+        DisplayInfo();
     }
     public double GetTotalCost(double price, int quantity)
     {
@@ -20,6 +22,6 @@ public class Product
     }
     public string DisplayInfo()
     {
-        return $"{_name}, {_quantity} units, total: {_totalCost}";
+        return $"{_name}, id: {_productId},{_quantity} units, total: {_totalCost}";
     }
 }
