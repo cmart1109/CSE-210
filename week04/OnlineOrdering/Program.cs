@@ -46,6 +46,6 @@ class Program
         Console.WriteLine(order4.GetShippingLabel());
         order4.GetPackingLabel();
         order4.GetShippingCost();
-        Console.WriteLine($"Total Cost: {order4.GetGrandTotal()}");
+        Console.WriteLine($"Total Cost: {order4.GetGrandTotal()}$");
     }
 }

@@ -21,6 +21,6 @@ public class Product
     }
     public string DisplayInfo()
     {
-        return $"{_name}, id:{_productId}, unit price:{_price}, {_quantity} units, total: {_totalCost}";
+        return $"{_name}, id:{_productId}, unit price:{_price}$, {_quantity} units, total: {_totalCost}$";
     }
 }
