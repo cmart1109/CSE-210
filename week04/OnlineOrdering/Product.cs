@@ -12,16 +12,15 @@ public class Product
         _productId = id;
         _price = price;
         _quantity = quantity;
-        GetTotalCost(_price,_quantity);
-        DisplayInfo();
+        _totalCost = _price * _quantity; 
     }
-    public double GetTotalCost(double price, int quantity)
+    public double GetTotalCost()
     {
-        _totalCost = price * quantity; 
+        _totalCost = _price * _quantity; 
         return _totalCost;
     }
     public string DisplayInfo()
     {
-        return $"{_name}, id: {_productId},{_quantity} units, total: {_totalCost}";
+        return $"{_name}, id:{_productId}, unit price:{_price}, {_quantity} units, total: {_totalCost}";
     }
 }

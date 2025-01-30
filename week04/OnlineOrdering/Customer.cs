@@ -1,27 +1,29 @@
+using System.Collections.Concurrent;
+
 public class Customer
 {
     private string _name;
     private Address _address;
-
-    private bool _isFromUsa;
+    private string _country;
 
     public Customer(string name, Address address)
     {
         _name = name;
         _address = address;
-        _isFromUsa = IsFromUSA(_address);
+        _country = address.GetCountry();
     }
-    public bool IsFromUSA(Address address)
+    public bool IsFromUSA()
     {
-        string country = address.GetCountry();
-        if (country == "USA")
+        if (_country == "USA")
         {
-            Console.WriteLine("This Costumer is from the United States");
             return true;
         }
         else {
-            Console.WriteLine("This Costumer is not from the USA");
             return false;
         }
+    }
+    public string GetCustomerInfo()
+    {
+        return $"{_name}, {_address.GetAddress()}";
     }
 }

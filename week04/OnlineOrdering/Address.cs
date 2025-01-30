@@ -19,7 +19,6 @@ public class Address
         _city = city;
         _state = state;
         _country = country;
-        Console.WriteLine(GetAddress());
     }
 
 }
