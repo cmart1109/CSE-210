@@ -25,7 +25,7 @@ class Program
         order2.GetPackingLabel();
         order2.GetShippingCost();
         Console.WriteLine($"Total Cost: {order2.GetGrandTotal()}");
-
+        
         Address address3 = new Address("Avenida Revolución", "Monterrey", "NL", "Mexico");
         Customer customer3 = new Customer("Carlos", address3);
         Order order3 = new Order(customer3);
