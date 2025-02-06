@@ -1,0 +1,30 @@
+public class ReflectingActivty : Activity
+{
+    private List<string> _prompts = new List<string>();
+    private List<string> _questions = new List<string>();
+
+    public ReflectingActivty()
+    {
+
+    }
+    public void Run()
+    {
+
+    }
+    public string GetRandomPrompt()
+    {
+        return "Random Prompt";
+    }
+    public string GetRandomQuestion()
+    {
+        return "Random Question";
+    }
+    public void DisplayPrompt()
+    {
+        Console.WriteLine("Display Prompt");
+    }
+    public void DisplayQuestion()
+    {
+        Console.WriteLine("Display Question");
+    }
+}

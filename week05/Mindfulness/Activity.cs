@@ -2,26 +2,52 @@ public class Activity
 {
     private string _name;
     private string _description;
-    protected string duration;
+    protected int _duration;
 
-    public Activity()
+    public Activity(string name, string description)
 {
-
+    _name = name;
+    _description = description;
 }
     public void DisplayStartingMessage()
     {
-        Console.WriteLine("This is the Starting Message");
+        Console.WriteLine($"Welcome to the {_name} activity");
+        Console.WriteLine("");
+        Console.WriteLine($"{_description}");
     }
     public void DisplayEndingMessage()
     {
-        Console.WriteLine("This is the Ending Message now");
+        
     }
     public void ShowSpinner(int seconds)
     {
-        Console.WriteLine("Spinner");
+        Console.WriteLine("Get Ready!");
+        Console.Write("^");
+        Thread.Sleep(500);
+        Console.Write("\b \b");
+        Console.Write(">");
+        Thread.Sleep(500);
+        Console.Write("\b \b");
+        Console.Write("v");
+        Thread.Sleep(500);
+        Console.Write("\b \b");
+        Console.Write("<");
+        Thread.Sleep(500);
+        Console.Write("\b \b");
+        Console.Write("^");
+        Thread.Sleep(500);
+        Console.Write("\b \b");
+        Console.Write(">");
+        Thread.Sleep(500);
+        Console.Write("\b \b");
+        Console.Write("v");
+        Thread.Sleep(500);
+        Console.Write("\b \b");
+        Console.Write("<");
+        Thread.Sleep(500);
     }
     public void ShowCount(int seconds)
     {
-        Console.WriteLine("Count");
+        _duration = seconds;
     }
 }
