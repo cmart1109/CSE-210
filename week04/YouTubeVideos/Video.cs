@@ -11,18 +11,18 @@ public class Video
         _author = author;
         _length = length;
     }
-    public string GetDisplayInfo()
-    {
-        return $"{_title}, from {_author}, with duration of {_length} seconds.";
-    }
+
     public void StoreComments(Comment comment)
     {
         _comments.Add(comment);
     }
-    public void ShowAllComments()
+    public void ShowAllContent()
     {
+        Console.WriteLine($"{_title}, author: {_author}, length: {_length} seconds.");
+        Console.WriteLine("Comments of the video");
         foreach (var comment in _comments)
         {
+            
             Console.WriteLine(comment.GetCommentInfo());
         }
     }

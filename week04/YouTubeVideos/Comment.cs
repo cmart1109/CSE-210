@@ -14,6 +14,6 @@ public class Comment
     } 
 public string GetCommentInfo()
     {
-        return $"{_name}:{_comment}";
+        return $"{_name}: {_comment}";
     }
 }
