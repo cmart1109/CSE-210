@@ -6,14 +6,14 @@ public class Address
     private string _country;
     public string GetAddress()
     {
-        return $"{_streetAdress},{_city},{_state},{_country}";
+        return $"{_streetAdress}, City of {_city}, State of {_state}, in {_country}";
     }
     public string GetCountry()
     {
         return $"{_country}";
     }
 
-    public Address(string streetAdress,string  city,string  state,string  country)
+    public Address(string streetAdress,string city,string state,string country)
     {
         _streetAdress = streetAdress;
         _city = city;

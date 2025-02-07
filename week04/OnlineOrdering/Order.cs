@@ -33,7 +33,7 @@ public class Order
     }
     public void GetShippingCost()
     {
-        if (_customer.IsFromUSA() == true)
+        if (_customer.IsAmerican() == true)
         {
             _shippingCost += 5;
         }

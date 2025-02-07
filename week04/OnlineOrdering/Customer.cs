@@ -12,7 +12,7 @@ public class Customer
         _address = address;
         _country = address.GetCountry();
     }
-    public bool IsFromUSA()
+    public bool IsAmerican()
     {
         if (_country == "USA")
         {
