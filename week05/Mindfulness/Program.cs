@@ -22,9 +22,11 @@ class Program
             Console.WriteLine("How long, in seconds would you like for your session?:");
             string duration = Console.ReadLine();
             int durationInt = int.Parse(duration);
+            Console.WriteLine("Get Ready!");
             breathing.ShowSpinner(10);
             breathing.ShowCount(durationInt);
             breathing.Run();
+            breathing.DisplayEndingMessage();
             
             
             

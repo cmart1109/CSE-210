@@ -17,11 +17,12 @@ public class Activity
     }
     public void DisplayEndingMessage()
     {
+        Console.WriteLine($"You have completed {_duration} seconds of the {_name} activity");
+        ShowSpinner(10);
         
     }
     public void ShowSpinner(int seconds)
     {
-        Console.WriteLine("Get Ready!");
         Console.Write("^");
         Thread.Sleep(500);
         Console.Write("\b \b");
