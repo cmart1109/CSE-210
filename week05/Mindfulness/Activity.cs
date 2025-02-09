@@ -14,41 +14,48 @@ public class Activity
         Console.WriteLine($"Welcome to the {_name} activity");
         Console.WriteLine("");
         Console.WriteLine($"{_description}");
+        Console.WriteLine("How long, in seconds would you like for your session?:");
+        string seconds = Console.ReadLine();
+        _duration = int.Parse(seconds);
+        Console.WriteLine("Get ready!...");
+        ShowSpinner(5);
     }
     public void DisplayEndingMessage()
     {
-        Console.WriteLine($"You have completed {_duration} seconds of the {_name} activity");
-        ShowSpinner(10);
+        Console.WriteLine($"You have completed the {_name} activity");
+        ShowSpinner(4);
         
     }
     public void ShowSpinner(int seconds)
     {
+        int inSeconds = seconds;
+        while (inSeconds > 0)
+        {
         Console.Write("^");
-        Thread.Sleep(500);
+        Thread.Sleep(250);
         Console.Write("\b \b");
         Console.Write(">");
-        Thread.Sleep(500);
+        Thread.Sleep(250);
         Console.Write("\b \b");
         Console.Write("v");
-        Thread.Sleep(500);
+        Thread.Sleep(250);
         Console.Write("\b \b");
         Console.Write("<");
-        Thread.Sleep(500);
+        Thread.Sleep(250);
         Console.Write("\b \b");
-        Console.Write("^");
-        Thread.Sleep(500);
-        Console.Write("\b \b");
-        Console.Write(">");
-        Thread.Sleep(500);
-        Console.Write("\b \b");
-        Console.Write("v");
-        Thread.Sleep(500);
-        Console.Write("\b \b");
-        Console.Write("<");
-        Thread.Sleep(500);
+        inSeconds -= 1;
+        }
     }
     public void ShowCount(int seconds)
     {
-        _duration = seconds;
+        int inCount = seconds;
+        while (inCount > 0)
+        {
+        Console.Write($"{inCount}");
+        Thread.Sleep(1000);
+        Console.Write("\b \b");
+        _duration -= 1;
+        inCount -= 1;
+        }
     }
 }

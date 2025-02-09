@@ -24,7 +24,23 @@ public class ReflectingActivty : Activity
     }
     public void Run()
     {
+        DisplayStartingMessage();
+        Console.WriteLine("Consider the Following prompt:");
         DisplayPrompt();
+        Console.WriteLine("When you have something in mind, press enter.");
+        Console.ReadLine();
+        Console.WriteLine("Now ponder on each of the following questions as they related to this experience");
+        Console.WriteLine("You may begin in:");
+        ShowCount(5);
+        while (_duration > 0) 
+        {
+        DisplayQuestion();
+        ShowSpinner(8);
+        _duration -= 8;
+
+        }
+        DisplayEndingMessage();
+
     }
     public string GetRandomPrompt()
     {

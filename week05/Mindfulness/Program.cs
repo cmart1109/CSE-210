@@ -18,18 +18,12 @@ class Program
         if (election == "1")
         {
             BreathingActivity breathing = new BreathingActivity("Breathing", "This Activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing");
-            breathing.DisplayStartingMessage();
-            Console.WriteLine("How long, in seconds would you like for your session?:");
-            string duration = Console.ReadLine();
-            int durationInt = int.Parse(duration);
-            Console.WriteLine("Get Ready!");
-            breathing.ShowSpinner(10);
-            breathing.ShowCount(durationInt);
             breathing.Run();
-            breathing.DisplayEndingMessage();
-            
-            
-            
+        }
+        else if (election == "2")
+        {
+            ReflectingActivty reflecting = new ReflectingActivty("Reflecting", "This Activity will help you reflecto on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life");
+            reflecting.Run();
         }
         } while (election != "4");
     }
