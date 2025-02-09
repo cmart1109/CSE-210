@@ -25,6 +25,11 @@ class Program
             ReflectingActivty reflecting = new ReflectingActivty("Reflecting", "This Activity will help you reflecto on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life");
             reflecting.Run();
         }
+        else if (election == "3")
+        {
+            ListingActivity listing = new ListingActivity("Listing","This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
+            listing.Run();
+        }
         } while (election != "4");
     }
 }

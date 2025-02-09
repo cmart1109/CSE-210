@@ -55,7 +55,7 @@ public class ReflectingActivty : Activity
     }
     public void DisplayPrompt()
     {
-        Console.WriteLine($"{GetRandomPrompt()}");
+        Console.WriteLine($"____{GetRandomPrompt()}___");
     }
     public void DisplayQuestion()
     {
