@@ -1,5 +1,7 @@
+using System.IO;
 public class GoalManager 
 {
+    string fileName;
     private List<Goal> _goals = new List<Goal>();
     private int _score;
     string menuSelection;
@@ -27,6 +29,10 @@ public class GoalManager
         else if (menuSelection == "2")
         {
             ListGoalNames();
+        }
+        else if (menuSelection == "3")
+        {
+            SaveGoals();
         }
         else if (menuSelection == "6")
         {
@@ -96,7 +102,16 @@ public class GoalManager
     }
     public void SaveGoals()
     {
+        Console.WriteLine("Please type the name of the file where you will save the goals: ");
+        fileName = $"{Console.ReadLine()}.txt";
+        using (StreamWriter outputFile = new StreamWriter(fileName))
+        {
+            foreach (var goal in _goals)
+            {
+                outputFile.WriteLine(goal.GetStringRepresentation());
+            }
 
+        }
     }
     public void LoadGoals()
     {

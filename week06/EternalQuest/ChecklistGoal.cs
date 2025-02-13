@@ -1,6 +1,6 @@
 public class ChecklistGoal : Goal
 {
-    private int _amountCompleted;
+    private int _amountCompleted = 0;
     private int _target;
     private int _bonus;
 
@@ -20,10 +20,10 @@ public class ChecklistGoal : Goal
     }
     public override string GetDetailsString()
     {
-        return "";
+        return $"[ ] {_shortName} ({_description}) -- Currently Completed: {_amountCompleted}/{_target}";
     }
     public override string GetStringRepresentation()
     {
-        return "";
+        return $"ChecklistGoal:{_shortName},{_description},{_points},{_bonus},{_target},{_amountCompleted}";
     }
 }
