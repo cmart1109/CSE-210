@@ -115,6 +115,42 @@ public class GoalManager
     }
     public void LoadGoals()
     {
+        Console.WriteLine("Please type the name of the file where you will load the goals: ");
+        fileName = $"{Console.ReadLine()}.txt";
+        string[] lines = System.IO.File.ReadAllLines(fileName);
+        foreach (string  line in lines)
+        {
+            string[] parts = line.Split(",");
+            string GoalKind = parts[0];
+            string name = parts[1];
+            string description = parts[2];
+            string pointsString = parts[3];
+            int points = int.Parse(pointsString);
+            if (GoalKind == "SimpleGoal")
+            {
+                SimpleGoal simpleGoal = new SimpleGoal(name, description, points);
+                _goals.Add(simpleGoal);
+            }
+            else if (GoalKind == "EternalGoal")
+            {
+                EternalGoal eternalGoal = new EternalGoal(name, description, points);
+                _goals.Add(eternalGoal);
+            }
+            else if (GoalKind == "ChecklistGoal")
+            {
+            string bonusString = parts[4];
+            int bonus = int.Parse(bonusString);
+            string targetString = parts[5];
+            int target = int.Parse(targetString);
+            string amountString = parts[6];
+            int amount = int.Parse(amountString);
+            ChecklistGoal checklistGoal = new ChecklistGoal(name, description, points, target, bonus);
+            _goals.Add(checklistGoal);
+
+            }
+
+
+        }
         
     }
 }
