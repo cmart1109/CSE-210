@@ -12,7 +12,7 @@ public class GoalManager
     public void Start()
     {
         do {
-
+        DisplayPlayerInfo();
         Console.WriteLine("Menu Options: ");
         Console.WriteLine("1. Create new Goal");
         Console.WriteLine("2. List Goals");
@@ -45,7 +45,7 @@ public class GoalManager
     }
     public void DisplayPlayerInfo()
     {
-
+        Console.WriteLine($"You have {_score} points");
     }
     public void ListGoalNames()
     {
@@ -148,9 +148,7 @@ public class GoalManager
             _goals.Add(checklistGoal);
 
             }
-
-
         }
-        
+        Console.WriteLine("The Goals were succesfully Uptdated!");
     }
 }
