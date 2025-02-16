@@ -13,6 +13,7 @@ public class GoalManager
     {
         do {
         DisplayPlayerInfo();
+        Console.WriteLine("");
         Console.WriteLine("Menu Options: ");
         Console.WriteLine("1. Create new Goal");
         Console.WriteLine("2. List Goals");
@@ -34,9 +35,17 @@ public class GoalManager
         {
             SaveGoals();
         }
+        else if (menuSelection == "5")
+        {
+            RecordEvents();
+        }
         else if (menuSelection == "6")
         {
             Console.WriteLine("bye :)");
+        }
+        else if (menuSelection == "4")
+        {
+            LoadGoals();
         }
         else {
             Console.WriteLine("Please select a valid option: ");
@@ -50,9 +59,11 @@ public class GoalManager
     public void ListGoalNames()
     {
         Console.WriteLine("The Goals are:");
+        int listGoals = 1;
         foreach (var goal in _goals)
         {
-            Console.WriteLine(goal.GetDetailsString());
+            Console.WriteLine($"{listGoals}.{goal.GetDetailsString()}");
+            listGoals += 1;
         }
     }
     public void CreateGoal()
@@ -98,6 +109,14 @@ public class GoalManager
     }
     public void RecordEvents()
     {
+        ListGoalNames();
+        Console.WriteLine("What goal did you Accompplish?");
+        string goaled = Console.ReadLine();
+        int goaltoAccomplish = int.Parse(goaled);
+        int pointsEarned = _goals[goaltoAccomplish - 1].RecordEvent();
+        _score += pointsEarned;
+        Console.WriteLine($"Now you have {_score} points");
+        
 
     }
     public void SaveGoals()

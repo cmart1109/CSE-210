@@ -6,14 +6,22 @@ public class SimpleGoal : Goal
     {
         
     }
-    public override void RecordEvent()
-    {
-
-    }
-    public override bool IsComplete()
+    public override int RecordEvent()
     {
         _IsComplete = true;
-        return _IsComplete;
+        Console.WriteLine($"Congratulations, you've earned {_points} points!");
+        return _points;
+        
+    }
+    public override string IsComplete()
+    {
+        if (_IsComplete == true)
+        {
+        return "X";
+        }
+        else {
+            return " ";
+        }
     }
     public override string GetStringRepresentation()
     {

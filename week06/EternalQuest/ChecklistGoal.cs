@@ -10,13 +10,31 @@ public class ChecklistGoal : Goal
         _bonus = bonus;
     }
 
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
-        
+        _amountCompleted += 1;
+        Console.WriteLine($"Congratulations, you've earned {_points} points!");
+        if (_amountCompleted == _target)
+        {
+        Console.WriteLine("Double Congratulations! you've achieved the number of times for a bonus!");
+        Console.WriteLine($"You also earned {_bonus} points");
+        return _points + _bonus;
+        }
+        else {
+        return _points;
+        }
     }
-    public override bool IsComplete()
+    public override string IsComplete()
     {
-        return false;
+            {
+        if (_amountCompleted == _target)
+        {
+        return "X";
+        }
+        else {
+            return " ";
+        }
+    }
     }
     public override string GetDetailsString()
     {

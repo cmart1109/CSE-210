@@ -10,17 +10,17 @@ public class Goal
         _description = description;
         _points = points;
     }
-    public virtual void RecordEvent()
+    public virtual int RecordEvent()
     {
-
+    return 0;
     }
-    public virtual bool IsComplete()
+    public virtual string IsComplete()
     {
-        return false;
+        return "";
     }
     public virtual string GetDetailsString()
     {
-        return $"[ ] {_shortName} ({_description})";
+        return $"[{IsComplete()}] {_shortName} ({_description})";
     }
     public virtual string GetStringRepresentation()
     {
